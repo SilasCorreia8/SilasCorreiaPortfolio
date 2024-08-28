@@ -1,0 +1,497 @@
+/* Estilo Geral */
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+      
+}
+
+.logoTemp {
+    width: 100px;
+    border-radius: 100px;
+}
+
+body {
+    background-color: blue;
+    height: 100vh;
+}
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.btn-contato button {
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: red;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+button:hover, form .btn-enviar input[type=submit]:hover {
+    box-shadow: 0px 0px 8px rgb(255, 0, 0);
+    transform: scale(1.05);
+    transition: .2s;
+}
+
+
+h2.titulo {
+    color: rgba(255, 255, 255, 0.904);
+    font-size: 35px;
+    text-align: center;
+}
+
+h2.titulo span {
+    color: red;
+}
+
+.btn-sobre button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: red;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 0 10px 0 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Estilo do Cabeçalho */
+
+header {
+    padding: 20px 4%;
+}
+
+header > .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a {
+    color: #a09f9f;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s; 
+}
+
+header nav.menu-desktop a:hover {
+    color: white;
+    transform: scale(1.05);
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav.menu-desktop li {
+    display: inline-block;
+    padding: 0 40px;
+}
+
+/* Estilo do menu mobile */
+.btn-abrir-menu {
+    display: none;
+}
+
+.btn-abrir-menu i {
+    color: red;
+    font-size: 40px;
+}
+
+.menu-mobile {
+    background-color: blue;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: .4s;
+}
+
+.menu-mobile.abrir-menu {
+    width: 70%;
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menu {
+    display: block;
+}
+
+.menu-mobile .btn-fechar {
+    padding: 20px 8%;
+}
+
+.menu-mobile .btn-fechar i {
+    color: red;
+    font-size: 30px;
+}
+
+.menu-mobile nav ul {
+    text-align: right;
+}
+
+.menu-mobile nav ul li a {
+    color: rgba(255, 255, 255, 0.904);
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    display: block;
+}
+
+.menu-mobile nav ul li a:hover {
+    background-color: red;
+}
+
+.overlay-menu {
+    background-color: rgba(0, 0, 255, 0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
+}
+
+/* Estilo topo do site/Inicio */
+
+section.topo-do-site {
+    padding: 40px 4%;
+}
+
+section.topo-do-site .flex {
+    align-items: center;
+    justify-content: center;
+    gap: 200px;
+}
+
+.txt-topo-site h1::first-letter {
+    color: red;
+}
+
+.topo-do-site .txt-topo-site {
+    color: rgba(255, 255, 255, 0.904);
+}
+
+.topo-do-site .txt-topo-site h1 {
+    color: rgba(255, 255, 255, 0.904);
+    font-size: 42px;
+}
+
+.topo-do-site .txt-topo-site h1 span{
+    color: red;
+}
+
+.topo-do-site .txt-topo-site p{
+    text-align: justify;
+    margin: 32px 0;
+}
+
+.imgPrin {
+    width: 300px;
+    border-radius: 200px / 300px;
+}
+
+.topo-do-site .img-topo-site img {
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+/* Animação Imagem */
+
+@keyframes flutuar {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 15px;
+    }
+
+}
+
+/* Estilos Sobre */
+
+.imgSobre {
+    width: 200px;
+    border-radius: 20px;
+}
+
+section.sobre {
+    padding: 40px 4%;
+}
+
+section.sobre .flex {
+    align-items: center;
+    gap: 60px;
+}
+
+.sobre .txt-sobre {
+    color: rgba(255, 255, 255, 0.904);
+}
+
+.sobre .txt-sobre h2 {
+    font-size: 35px;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+
+.sobre .txt-sobre h2 span {
+    color: red;
+    display: block;
+}
+
+.sobre .txt-sobre p {
+    margin: 20px 0;
+    text-align: justify;
+}
+
+/* Estilos Atividade */
+
+section.atividades {
+    padding: 0px 4%;
+}
+
+.imgAtividades {
+    width: 225px;
+    border-radius: 20px;
+}
+
+section.atividades .flex {
+    justify-content: space-around;
+    text-align: center;
+}
+
+section.atividades .interface p {
+    color: rgba(255, 255, 255, 0.904);
+    margin-top: 20px;
+    text-align: center;
+}
+
+.atividades .atividades-box {
+    color: rgba(255, 255, 255, 0.904);
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 45px;
+    transition: .2s;
+}
+
+.atividades .atividades-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 8px red;
+}
+
+.atividades .atividades-box i {
+    font-size: 70px;
+}
+
+.atividades .atividades-box h3 {
+    font-size: 28px;
+    margin: 4px 0;
+}
+
+/* Estilo Formulário/Contato */
+
+section.formulario {
+    padding: 80px 4%;
+}
+
+section.formulario .alerta {
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+section.formulario .alerta span {
+    color: red;
+}
+
+section.formulario p, a {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.904);
+    margin-bottom: 50px;
+}
+
+section.formulario a {
+    text-decoration: underline;
+}
+
+section.formulario a:hover {
+    color: red;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+form input, form textarea {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.363);
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: white;
+    font-size: 18px;
+}
+
+form input::placeholder, form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.74);
+}
+
+form textarea {
+    resize: none;
+    height: 200px;
+}
+
+form .btn-enviar {
+    margin-top: 22px;
+    text-align: center;
+}
+
+form .btn-enviar input[type=submit] {
+    width: 180px;
+    background-color: red;
+    color: black;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 30px;
+    margin-bottom: 80px;
+}
+
+/* Estilos Footer */
+
+.imgFooter {
+    width: 100px;
+    border-radius: 100px;
+}
+
+footer {
+    padding: 40px 4%;
+    box-shadow: 0 0 40px 10px red;
+}
+
+footer .flex {
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .line-footer {
+    padding: 20px 0;
+}
+
+.borda {
+    border-top: 2px solid red;
+}
+
+footer .line-footer p i {
+    color: red;
+    font-size: 22px;
+}
+
+footer .line-footer p a {
+    color: rgba(255, 255, 255, 0.904);
+}
+
+@media screen and (max-width: 1020px) {
+    
+    /* Geral */
+    .flex {
+        flex-direction: column;
+    }
+
+    h2.titulo {
+        font-size: 32px;
+    }
+
+    section.topo-do-site .flex {
+        gap: 30px;
+    }
+
+    /* Estilos Cabeçalho */
+    .menu-desktop, .btn-contato {
+        display: none;
+    }
+
+    .btn-abrir-menu {
+        display: block;
+    }
+
+    /* Estilos Topo do Site */
+    section.topo-do-site {
+        padding: 40px 8%;
+    }
+
+    .topo-do-site .txt-topo-site h1 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .imgPrin {
+        width: 100%;
+    }
+
+    /* Estilos Atividade */
+    section.atividades {
+        padding: 40px 8%;
+    }
+
+    /* Estilos Sobre */
+    section.sobre {
+        padding: 80px 8%;
+    }
+
+    section.sobre .flex {
+        flex-direction: column-reverse;
+    }
+
+    .sobre .txt-sobre h2 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .imgSobre {
+        width: 200px;
+    }
+
+    .btn-sobre {
+        text-align: center;
+    }
+    
+    /* Estilo Formulario */
+    section.formulario {
+        padding: 0px 8%;
+        margin-bottom: 40px;
+    }
+    
+    /* Footer */
+    footer {
+        padding: 30px 8%;
+    }
+
+    footer .flex {
+        gap: 30px;
+    }
+
+}
